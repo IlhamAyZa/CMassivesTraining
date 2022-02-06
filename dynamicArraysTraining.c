@@ -1,4 +1,4 @@
-#include <iostream>
+#include <studio.h>
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -11,19 +11,19 @@ int main(int argc, char const *argv[])
     }
 
     for (int a : a1){
-        cout << a << " "
+        printf("%d " ,a );
     }
-    cout << endl;
+    printf("\n");
 
     for(i=0; i < 50; i++) {
         c1[i] = a_char + rand() % 26 ;   
     }
 
     for(char c : c1){
-        cout << c << " ";
+        printf("%c " ,c);
     }
 
-    cout << endl;
+    printf("\n");
 
     int matrix[50][50];
 
@@ -47,8 +47,8 @@ int main(int argc, char const *argv[])
 
     int N, M;
 
-    cin >> N;
-    cin >> M
+    scanf("%d",&N);
+    scanf("%d",&M);
 
     int *dim2_din_arr;
 
