@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char const* argv[])
 {
+	//1
+	/*
 	int num, n1, n2;
 	double frx;
 
@@ -19,6 +22,26 @@ int main(int argc, char const* argv[])
 		frx = (n1 + 0.0) / (n2 + 0.0);
 		printf("We get : %f \n", frx);
 	}
+	*/
+
+	//2 
+
+	double* arrOfFrx;
+	int num, num1, num2;
+
+	printf("Enter amount of numbers in massive: ");
+	scanf("%d", &num);
+
+	for (int i = 0; i < num; i++)
+	{
+		num1 = (rand() % 200) - 100;
+		num2 = (rand() % (9 * num1)) - num1;
+
+		arrOfFrx[i] = (num2 + 0.0) / (num1 + 0.0);
+
+		printf("%.3f ", arrOfFrx[i]);
+	}
 
 	return 0;
+
 }
