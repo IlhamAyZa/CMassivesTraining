@@ -19,14 +19,6 @@ int main(int argc, char const *argv[])
 
     printf("\n");
 
-    int matrix[50][50];
-
-    for(int i=0; i < 50; i++) {
-        for(int j=0; j < 50; j++) {
-            matrix[i][j] = 0;
-        }
-    }
-
     int *din_arr;
     din_arr = (int *)malloc(sizeof(int)*50);
 
