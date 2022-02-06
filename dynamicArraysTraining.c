@@ -1,48 +1,42 @@
 #include <stdio.h>
-using namespace std;
+#include <stdlib.h>
 
 int main(int argc, char const *argv[])
 {
     int a1[100], a_char = 64; 
     char c1[50];  
 
-    for(i=0; i < 100; i++) {
-        a1[i] = rand() % 100 + 1 ;   
-    }
-
-    for (int a : a1){
-        printf("%d " ,a );
+    for(int i=0; i < 100; i++) {
+        a1[i] = 0;   
+        printf("%d " ,a1[i] );
     }
     printf("\n");
 
-    for(i=0; i < 50; i++) {
-        c1[i] = a_char + rand() % 26 ;   
-    }
-
-    for(char c : c1){
-        printf("%c " ,c);
+    for(int i=0; i < 50; i++) {
+        c1[i] = 'a';   
+        printf("%c " ,c1[i]);
     }
 
     printf("\n");
 
     int matrix[50][50];
 
-    for(i=0; i < 50; i++) {
-        for(j=0; j < 50; j++) {
-            matrix[i][j] = rand()%100;
+    for(int i=0; i < 50; i++) {
+        for(int j=0; j < 50; j++) {
+            matrix[i][j] = 0;
         }
     }
 
     int *din_arr;
     din_arr = (int *)malloc(sizeof(int)*50);
 
-    if(p_array == NULL) {
+    if(din_arr == NULL) {
         printf("malloc of size %d failed!\n", 50);   
         exit(1);  
     }
 
-    for(i=0; i < 50; i++) {
-        p_array[i] = rand() % 100;
+    for(int i=0; i < 50; i++) {
+        din_arr[i] = 0;
     }
 
     int N, M;
@@ -54,8 +48,8 @@ int main(int argc, char const *argv[])
 
     dim2_din_arr = (int *)malloc(sizeof(int)*N*M);
 
-    for(i=0; i < N; i++) {
-        for(j=0; j < M; j++) {
+    for(int i=0; i < N; i++) {
+        for(int  j=0; j < M; j++) {
             dim2_din_arr[i*M +j] = 0;
         }
     }
