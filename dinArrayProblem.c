@@ -32,13 +32,23 @@ int main(int argc, char const* argv[])
 	printf("Enter amount of numbers in massive: ");
 	scanf("%d", &num);
 
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < num - 1; i++)
 	{
 		num1 = (rand() % 200) - 100;
-		num2 = (rand() % (9 * num1)) - num1;
+		num2 = (rand() % (2 * num1)) - num1;
 
 		arrOfFrx[i] = (num2 + 0.0) / (num1 + 0.0);
 
+		printf("%.3f ", arrOfFrx[i]);
+	}
+
+	for (int i = 1; i < sizeof(arrOfFrx); i++)
+	{
+		arrOfFrx[i] = 1;
+	}
+
+	for (int i = 0; i < sizeof(arrOfFrx); i++)
+	{
 		printf("%.3f ", arrOfFrx[i]);
 	}
 
